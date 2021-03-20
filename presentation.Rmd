@@ -1,0 +1,39 @@
+---
+title: "Week_4_Assignment_ShinyApp"
+author: "Adugna Kelkay"
+date: "3/20/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Body Mass Index Calculation
+
+This is a presentation on shiny app based on Coursera assignment for "Developing Data Products" course.
+
+## The app consists of
+
+- Requesting inputs
+- Calculating BMI
+- Ploting the BMI
+
+## How BMI is Calculated
+
+This is a simple calulation of BMI based on weight and height inputs.
+```{r echo = TRUE, warning=FALSE, error=FALSE}
+defaulltWeight <- 150
+defaultHeight <- 5
+bmi <- defaulltWeight / (defaultHeight ^ 2) 
+bmi
+```
+
+## Plot BMI
+
+```{r }
+plot(0:30, 0:30, type = "n")
+points(bmi, bmi, col = "red", pch=19)
+
+```
+
